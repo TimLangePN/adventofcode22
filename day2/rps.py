@@ -20,17 +20,13 @@ def CalculatePoints(item):
 def CalculateOutcome(decisions):
     for scenario in Scenarios.win:
         if scenario == decisions: 
-            test = 6 + CalculatePoints(decisions[1])
-            return test
+            return 6 + CalculatePoints(decisions[1])
     for scenario in Scenarios.tie:
         if scenario == decisions: 
-            test = 3 + CalculatePoints(decisions[1])
-            return test
+            return 3 + CalculatePoints(decisions[1])
     for scenario in Scenarios.loss:
         if scenario == decisions: 
-            test = 0 + CalculatePoints(decisions[1])
-            return test
-
+            return 0 + CalculatePoints(decisions[1])
 
 # C vs Z = tie, scissor vs scissor = 3 + 3 = 6
 
