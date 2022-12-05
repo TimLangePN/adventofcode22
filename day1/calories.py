@@ -1,5 +1,5 @@
 calories = []
-
+top_three_calories = []
 with open('list.txt') as file:
     temp_calories = []
     for line in file:
@@ -8,4 +8,9 @@ with open('list.txt') as file:
                 temp_calories = []
                 continue
             temp_calories.append(int(line))
-    print(max(calories))
+    i = 0
+    while i != 3:
+        top_three_calories.append(max(calories))
+        calories.remove(max(calories))
+        i += 1
+    print(sum(top_three_calories))
